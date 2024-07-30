@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Output, Input, EventEmitter } from '@angular/core';
+
+
+type BtnVariants = "primary" | "secondary"; //tem dois tipos de botão
 
 @Component({
   selector: 'app-btn-primary',
@@ -8,5 +11,13 @@ import { Component } from '@angular/core';
   styleUrl: './btn-primary.component.scss'
 })
 export class BtnPrimaryComponent {
+  @Input("btn-text") btnText: string = "";
+  @Input() disabled: boolean = false;
+  @Input() loading: boolean = false;
+  @Input() variant: BtnVariants = "primary"
+  @Output("submit") onSubmit = new EventEmitter();
 
+  submit(){
+    this.onSubmit.emit();
+  }
 }

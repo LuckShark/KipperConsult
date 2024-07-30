@@ -1,1 +1,13 @@
-<p>btn-primary works!</p>
+<button
+  (click)="submit()"
+  [class]="'btn' + variant"
+  [disabled]="disabled"
+>
+  <span *ngIf="!loading"> //se não estiver carregando, texto normal
+    {{ btnText }}
+  </span>
+  <span *ngIf="loading">
+    carregando...
+  </span>
+
+</button>
