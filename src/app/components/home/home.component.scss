@@ -68,6 +68,13 @@ main{
 
 }
 
+//-----Seção 3 - Seção do Botão roxo "fale com..."
+.cta-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (min-width: 1080px) {
   .main-section{
     flex-direction: row;
