@@ -68,12 +68,26 @@ main{
 
 }
 
-//-----Seção 3 - Seção do Botão roxo "fale com..."
+//-----Seção 3 - Seção do Botão roxo "fale com..." // Também na Seção 6 e 7
 .cta-section {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
+  h2{ //-----Estou pegando exclusivamente o H2 da Seção 6
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: $primary-text;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 40px;
+  }
 }
+
+//-----Seção 7 -
+
 
 @media (min-width: 1080px) {
   .main-section{
@@ -82,5 +96,15 @@ main{
 
   .benefit-section{
     flex-direction: row;
+    .benefit-data h2 {
+      font-size: 60px;
+    }
+    p {
+        font-size: 40px;
+    }
+  }
+
+  .cta-section h2 {
+    font-size: 60px;
   }
 }
